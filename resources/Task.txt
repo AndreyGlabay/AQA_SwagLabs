@@ -1,0 +1,23 @@
+Задача курсового проекта - написать фреймворк для автоматизированного тестирования (Е2Е или интеграционное)
+с использованием технологий, которые мы изучали.
+
+Тестов должно быть столько, чтобы не стыдно было показать на собеседовании.
+Например, полное покрытие по 1 из фич (в терминологии Cucumber), и по одному сценарию для всех остальных фич, как минимум.
+
+------------------------------------------------------------------------------------------------------------------------
+TASK
+
+The objective of the project is to write a framework for automated testing (E2E or integration) using the technologies
+we have studied.
+
+There should be so many tests that you wouldn't be ashamed to show them at an interview.
+
+For example, full coverage of 1 of the features (in Cucumber terminology),
+and one scenario for all other features, at a minimum.
+
+------------------------------------------------------------------------------------------------------------------------
+
+(0) Preparation settings.
+    - (a) Modify git ignore - add some exemptions.
+    - (b) Modify Main.java default content.
+    - (c) pom.xml: set dependencies from TestNG, Selenium, Cucumber.
