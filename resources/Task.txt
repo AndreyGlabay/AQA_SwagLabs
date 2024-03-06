@@ -17,7 +17,85 @@ and one scenario for all other features, at a minimum.
 
 ------------------------------------------------------------------------------------------------------------------------
 
+1. Test Login - use: SeGrid + TestNG + Cucumber
+
+Check Login 4 x Usernames | 1 x Logo SWAGLABS | 1 x Image_Robot
+
+Open page
+CHeck elements:
+- input Username
+- input Password
+- button Login
+- Swaglabs logo
+- Bot image
+
+Accepted usernames are:
+standard_user
+locked_out_user
+problem_user
+performance_glitch_user
+
+Password for all users:
+secret_sauce
+
+
+------------------------------------------------------------------------------------------------------------------------
+SOLUTION
+
 (0) Preparation settings.
     - (a) Modify git ignore - add some exemptions.
     - (b) Modify Main.java default content.
     - (c) pom.xml: set dependencies from TestNG, Selenium, Cucumber.
+
+-----------------------------------------------------------
+
+(1) Налаштувати Selenium Grid.
+
+
+
+(1.2) У терміналі Windows PowerShell запустив  Selenium Grid:
+      PS C:\Users\rishe\OneDrive\Documents\AQA-Java\SeleniumServerGrid> java -jar ./selenium-server-4.18.1.jar standalone
+      (screenshot "1-2_*.png" attached).
+
+(1.3) У Google Chrome відкрив http://localhost:4444/ -> дашборд "Selenium Grid 4.18.1 (revision b1d3319b48)"
+      (screenshot "1-3_*.png" attached).
+
+(1.4) Скопіював звідти значення параметру "URI" = URL брокера -> http://192.168.0.102:4444
+      (screenshot "1-4_*.png" attached).
+
+
+
+
+(2) Запустити принаймні один сценарій на двох різних браузерах.
+
+(2.1) Зробив класс LoginPage.java та у ньому імплементував інстанс логіну на сайт "https://www.saucedemo.com/".
+(2.2) Зробив класс InventoryPage.java та у ньому імплементував інстанси айтемов на сторінці.
+(2.3) Зробив тестовий класс SwagLabsTest.java у якому за використанням Page Object-ів з двох попередніх класів реалізував
+      3 теста:
+      - перевірка логіна з кредами стандартного юзера;
+      - перевірка логіна з кредами заблокованого юзера;
+      - перевірка що можливо використовувати лінки зображень.
+(2.4) У класі SwagLabsTest.java - у кожному з тестових методів ініціював драйвер:
+      - у TestCase1 - Chrome,
+      - у TestCase2 - FireFox,
+      - у TestCase3 - FireFox.
+
+(3) Додав скріншот дашборда Selenium Grid - /resources/3_SeleniumGridDashboard.png
+    - (a) Додав скріншот Chrome інстансу - /resources/3a_GC_instance.png
+    - (b) Додав скріншот FireFox інстансу - /resources/3b_FF_instance.png
+
+------------------------------------------------------------------------------------------------------------------------
+(ADDITIONALLY)
+
+(4) ISSUE-1: вирішив проблему  пов'язану з відкриттям 2 зайвих пустих Chrome інстансів ->
+    -> видалив @BeforeTest з викликом Chrome driver, який помилково залишався з минулого завдання;
+
+(5) ISSUE-2: вирішив проблему коли Chrome та FireFox інстанси не зачинялись, хоч це і було імплементовано у @AfterTest->
+    -> (a) переніс WebDriver driver декларування з класу до кожного з тестовтих методів,
+    -> (b) також до кожного з тестових методів переніс із @AfterTest затримку на 5 сек,
+    -> (c) та до кожного з тестових методів переніс із @AfterTest завершення роботи драйверу.
+    Видалив пустий @AfterTest.
+    Відтепер вікна-інстанси зачиняються після виконання кожного тесту.
+
+---------------------------------------
+

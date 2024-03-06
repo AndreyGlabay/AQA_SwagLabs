@@ -1,4 +1,4 @@
-package com.saucedemo.test;
+package com.saucedemo;
 
 public class Main {
     public static void main(String[] args) {
