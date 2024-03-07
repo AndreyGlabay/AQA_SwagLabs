@@ -47,6 +47,9 @@ SOLUTION
     - (b) Modify Main.java default content.
     - (c) pom.xml: set dependencies from TestNG, Selenium, Cucumber.
 
+(1) Create test class LoginPageChrome (for test Login page content on Chrome browser)
+    - (a)
+
 -----------------------------------------------------------
 
 (1) Налаштувати Selenium Grid.
@@ -62,9 +65,6 @@ SOLUTION
 
 (1.4) Скопіював звідти значення параметру "URI" = URL брокера -> http://192.168.0.102:4444
       (screenshot "1-4_*.png" attached).
-
-
-
 
 (2) Запустити принаймні один сценарій на двох різних браузерах.
 
@@ -83,9 +83,6 @@ SOLUTION
 (3) Додав скріншот дашборда Selenium Grid - /resources/3_SeleniumGridDashboard.png
     - (a) Додав скріншот Chrome інстансу - /resources/3a_GC_instance.png
     - (b) Додав скріншот FireFox інстансу - /resources/3b_FF_instance.png
-
-------------------------------------------------------------------------------------------------------------------------
-(ADDITIONALLY)
 
 (4) ISSUE-1: вирішив проблему  пов'язану з відкриттям 2 зайвих пустих Chrome інстансів ->
     -> видалив @BeforeTest з викликом Chrome driver, який помилково залишався з минулого завдання;

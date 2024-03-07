@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dda3fe94-83e0-4bf9-a0ec-4d19aec01ce6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/pageobject/InventoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/pageobject/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/test/SwagLabsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/test/LoginPageElementsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Task.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucedemo/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucedemo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/saucedemo/pageobject/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/saucedemo/pageobject/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +51,50 @@
       <recent name="com.saucedemo.pageobject" />
       <recent name="com.saucedemo.test" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LoginPageElementsTests.checkTitleChrome" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA_SwagLabs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.test" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.test.LoginPageElementsTests" />
+      <option name="METHOD_NAME" value="checkTitleChrome" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageElementsTests.findElements" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA_SwagLabs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saucedemo.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.saucedemo.test" />
+      <option name="MAIN_CLASS_NAME" value="com.saucedemo.test.LoginPageElementsTests" />
+      <option name="METHOD_NAME" value="findElements" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LoginPageElementsTests.checkTitleChrome" />
+        <item itemvalue="TestNG.LoginPageElementsTests.findElements" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
